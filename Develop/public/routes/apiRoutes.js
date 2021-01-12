@@ -1,12 +1,15 @@
-const notesData = require("../data/notes.js");
-
-
+const notesData = require("../../db/db.json");
+let randomId = Math.floor(Math.random);
 module.exports = function(app) 
 {
     app.get("/api/notes", function(req, res) 
     {
-        res.json(notesData);
+       return res.json(notesData);
     })
-
+    
+    app.post("/api/notes", function(req, res)
+    {
+        
+    })
     
 }
